@@ -14,17 +14,7 @@ pip install django-bunny
 
 ## Configuration
 
-First, add `django_bunny` to your `INSTALLED_APPS`:
-
-```py
-INSTALLED_APPS = [
-    ...,
-    "django_bunny",
-    ...
-]
-```
-
-Now, create the following variables inside your `settings.py` file. These are required if you are using Django < `4.2`. Otherwise, you can use `OPTIONS` in the `STORAGES` setting.
+Create the following variables inside your `settings.py` file. These are required if you are using Django < `4.2`. Otherwise, you can use `OPTIONS` in the `STORAGES` setting.
 
 ```py
 # These can be found in your storage's dashboard under `FTP & API Access`
@@ -52,7 +42,7 @@ Finally, depending on which version of Django you are using you'll need to creat
 DEFAULT_FILE_STORAGE = 'django_bunny.storage.BunnyStorage'
 
 # Django >= 4.2. Set `BunnyStorage` where you want to use bunny.net's storage.
-{
+STORAGES = {
     "default": {
         "BACKEND": "django_bunny.storage.BunnyStorage",
 

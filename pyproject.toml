@@ -15,7 +15,7 @@ keywords = ["django", "bunny", "cdn", "storage", "django-storage"]
 [tool.poetry.dependencies]
 python = ">=3.7,<4.0"
 Django = ">=3.0.0"
-requests = "^2.30.0"
+requests = "^2.34.2"
 python-dateutil = "^2.8.2"
 
 
